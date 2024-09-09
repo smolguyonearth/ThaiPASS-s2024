@@ -13,7 +13,7 @@ T2 = 373
 
 
 def Luminosity(M):
-    return Lsun * math.pow(M, 3)
+    return Lsun * math.pow(M, 3) #converted to Lsun units
 
 def findD(L, T):
     return (math.pow(((1-0.36) * L)/ (16*math.pi*Boltzmann), 0.5)* math.pow(T, -2)) / AU
