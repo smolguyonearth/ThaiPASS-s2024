@@ -17,15 +17,15 @@ M = np.linspace(0.1, 2, 5)
 #keep distance values in a list
 distances = []
 
-# for i in range(len(M)):
-#     for j in range(len(P)):
-#         distances.append(distance(M[i], P[j]))
+for i in range(len(M)):
+    for j in range(len(P)):
+        distances.append(distance(M[i], P[j]))
 
 plt.figure()
 for i in range(len(M)):
     #consist of (start, end)
     #distances[i*len(P):(i+1)*len(P)] will give the distances for the ith planet
-    plt.plot(P, distances[i*len(P):(i+1)*len(P)], label='M = ' + str(round(M[i],1)))
+    plt.plot(P, distances[i*len(P):(i+1)*len(P)], label='M = ' + str(M[i]) + " SM")
 plt.xlabel('Period (days)')
 plt.ylabel('Semi-major axis (AU)')
 plt.title('Orbits of exoplanets')
